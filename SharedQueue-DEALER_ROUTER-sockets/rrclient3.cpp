@@ -6,20 +6,21 @@
 
 #include "zhelpers.hpp"
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     zmq::context_t context(1);
 
     zmq::socket_t requester(context, ZMQ_REQ);
     requester.connect("tcp://localhost:5559");
 
-    for( int request = 0 ; request < 20 ; request++) {
+    for (int request = 0; request < 20; request++)
+    {
 
-        s_send (requester, "Hola, te saludo desde el cliente 1");
+        s_send(requester, "HOLA, TE SALUDO DESDE EL CLIENTE 3");
         // s_send (requester, "Berna");
-        std::string string = s_recv (requester);
+        std::string string = s_recv(requester);
 
         std::cout << "Received reply " << request
-                << " [" << string << "]" << std::endl;
+                  << " [" << string << "]" << std::endl;
     }
 }

@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
         sleep(1);
 
         //  Send reply back to client
-        s_send(responder, "World from w2");
+        s_send(responder, "MUCHO GUSTO, SOY EL WORKER2");
         // s_send(responder, "World");
     }
 }

@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
     for (int request = 0; request < 20; request++)
     {
 
-        s_send(requester, "Hello from client 2");
+        s_send(requester, "HOLA, TE SALUDO DESDE EL CLIENTE 2");
         // s_send (requester, "Berna");
         std::string string = s_recv(requester);
 
